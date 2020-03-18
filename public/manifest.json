@@ -1,25 +1,80 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Confetti",
+  "name": "Confetti, your birthday app",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "react/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "64x64 32x32 24x24 16x16"
     },
     {
-      "src": "logo192.png",
+      "src": "react/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "react/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "favicon_package/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "favicon_package/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "favicon_package/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "favicon_package/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "favicon_package/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "favicon_package/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "32x32"
+    },
+    {
+      "src": "favicon_package/mstile-70x70.png",
+      "type": "image/png",
+      "sizes": "70x70"
+    },
+    {
+      "src": "favicon_package/mstile-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "favicon_package/mstile-150x150.png",
+      "type": "image/png",
+      "sizes": "150x150"
+    },
+    {
+      "src": "favicon_package/mstile-310x150.png",
+      "type": "image/png",
+      "sizes": "310x150"
+    },
+    {
+      "src": "favicon_package/mstile-310x310.png",
+      "type": "image/png",
+      "sizes": "310x310"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff"
 }
