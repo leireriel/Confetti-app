@@ -5,9 +5,9 @@ export const orange = '#f36d21';
 
 // grayscale
 export const black = '#000000';
-export const darkgray = '#242423';
+export const darkGray = '#242423';
 export const gray = '#333533';
-export const lightgray = '#CFDBD5';
+export const lightGray = '#CFDBD5';
 export const platinum = '#E8EDDF';
 export const white = '#FFFFFF';
 
