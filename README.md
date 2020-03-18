@@ -62,6 +62,11 @@ To generate a production ready version on `docs` folder:
 
 Now you can upload your public folder to GitHub Pages or similar :)
 
+## 🎨 Attributions
+* Our chicken icon is a free icon by [stockio.com](https://www.stockio.com/)
+* Favicon generated on [realfavicongenerator.net](https://realfavicongenerator.net/)
+* Palette from [coolors.co](https://coolors.co/)
+
 ## 🤜🤛 Suggestions
 
 All suggestions are welcome, please open an issue 💜
