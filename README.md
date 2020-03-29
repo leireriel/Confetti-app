@@ -32,6 +32,7 @@ You need to have installed [Node.js](https://nodejs.org/), and then:
 * [prop-types](https://www.npmjs.com/package/prop-types)
 * [eslint](https://www.npmjs.com/package/eslint)
 * [node-sass](https://www.npmjs.com/package/node-sass)
+* [styled-components](https://www.npmjs.com/package/styled-components)
 
 ## 🤝 Partnership
 
