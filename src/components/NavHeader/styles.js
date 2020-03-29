@@ -84,10 +84,14 @@ export const ElLogOut = styled.li`
   justify-content: center;
   align-items: flex-end;
   height: 3em;
-  min-width: 150px;
+  min-width: 70px;
 
   p {
     margin: 0;
     text-align: right;
   }
+`;
+
+export const LogoWrapper = styled.div`
+  padding-right: 0.5em;
 `;

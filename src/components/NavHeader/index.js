@@ -11,6 +11,7 @@ import {
   CalendarIcon,
   GearIcon,
   ElLogOut,
+  LogoWrapper,
 } from './styles';
 
 const NavHeader = () => {
@@ -18,7 +19,9 @@ const NavHeader = () => {
 
   return (
     <Header>
-      <Logo columnDirection={false} />
+      <LogoWrapper>
+        <Logo columnDirection={false} />
+      </LogoWrapper>
       <NavBar>
         <List>
           <El>
