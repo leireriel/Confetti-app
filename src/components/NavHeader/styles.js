@@ -1,20 +1,22 @@
 import styled from 'styled-components';
-import { yellow, white, black } from 'constants/colors';
+import { yellow } from 'constants/colors';
 import { device } from 'constants/device';
-import calendarIcon from 'assets/calendar.svg';
-import gearIcon from 'assets/gear.svg';
+import userIcon from 'assets/user.svg';
 
 export const Header = styled.header`
   background-color: ${yellow};
   display: flex;
-  flex-direction: column;
-  height: 100%;
-
+  align-items: center;
   padding: 0 1em;
+  height: 3em;
+  position: fixed;
+  top: ${props => props.show ? '0' : '-3em'};
+  transition: top 0.3s;
+  width: 100%;
+  box-sizing: border-box;
 
   @media ${device.tablet} {
     padding: 0 2em;
-    flex-direction: row;
   }
 `;
 
@@ -27,71 +29,23 @@ export const List = styled.ol`
   padding: 0;
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 `;
 
-export const El = styled.li`
-  height: 3em;
+export const Li = styled.li`
   display: flex;
-  flex-grow: 1;
-  cursor: pointer;
-
-  &:hover {
-    background-color: ${black};
-  }
-`;
-
-export const ElWrapper = styled.div`
-  background-color: ${props => (props.selected && white) || yellow};
-  display: flex;
-  flex-grow: 1;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  border: 0.2em solid ${yellow};
-  border-radius: 10px;
-  box-sizing: border-box;
-
-  &:hover {
-    border: 0.2em solid ${black};
-  }
+  cursor: pointer;
 `;
 
-export const IconWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
-export const CalendarIcon = styled.img.attrs({
-  src: calendarIcon,
-  alt: 'Calendario de cumpleaños',
+export const UserIcon = styled.img.attrs({
+  src: userIcon,
+  alt: 'Ajustes de usuaria/o y cerrar sesión',
 })`
   width: 2em;
-  padding: 0.5em;
 `;
 
-export const GearIcon = styled.img.attrs({
-  src: gearIcon,
-  alt: 'Ajustes',
-})`
-  width: 2em;
-  padding: 0.5em;
-`;
-
-export const ElLogOut = styled.li`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  height: 3em;
-  min-width: 70px;
-
-  p {
-    margin: 0;
-    text-align: right;
-  }
-`;
-
-export const LogoWrapper = styled.div`
-  padding-right: 0.5em;
+export const HeaderSeparator = styled.div`
+  margin-top: 3em;
 `;

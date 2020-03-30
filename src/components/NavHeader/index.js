@@ -1,56 +1,50 @@
-import React, { memo } from 'react';
-import { Micro, Link } from 'components/fonts';
+import React, { memo, useState } from 'react';
+import { Micro } from 'components/fonts';
 import Logo from 'components/Logo';
 import {
   Header,
   NavBar,
   List,
-  El,
-  ElWrapper,
-  IconWrapper,
-  CalendarIcon,
-  GearIcon,
-  ElLogOut,
-  LogoWrapper,
+  Li,
+  UserIcon,
+  HeaderSeparator,
 } from './styles';
 
 const NavHeader = () => {
-  const selected = 'calendar';
+  const [showHeader, setShowHeader] = useState(true);
+
+  const HideShowHeader = prevScrollPos => {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos) {
+      setShowHeader(true);
+    } else {
+      setShowHeader(false);
+    }
+    return prevScrollPos = currentScrollPos;
+  }
+
+  let prevScrollPos = window.pageYOffset;
+  window.onscroll = HideShowHeader(prevScrollPos);
 
   return (
-    <Header>
-      <LogoWrapper>
-        <Logo columnDirection={false} />
-      </LogoWrapper>
-      <NavBar>
-        <List>
-          <El>
-            <ElWrapper selected={selected === 'calendar'}>
-              <a href='#g'>
-                <IconWrapper>
-                  <CalendarIcon />
-                </IconWrapper>
-              </a>
-            </ElWrapper>
-          </El>
-          <El>
-            <ElWrapper selected={selected === 'settings'}>
-              <a href='#g'>
-                <IconWrapper>
-                  <GearIcon />
-                </IconWrapper>
-              </a>
-            </ElWrapper>
-          </El>
-          <ElLogOut>
-            <Micro>Antonia José Mercuria</Micro>
-            <Link href='#g'>
-              <Micro>Cerrar sesión</Micro>
-            </Link>
-          </ElLogOut>
-        </List>
-      </NavBar>
-    </Header>
+    <>
+      <Header show={showHeader}>
+        <NavBar>
+          <List>
+            <Li>
+              <Logo columnDirection={false}/>
+            </Li>
+            <Li>
+              {/* <Button> */}
+                <UserIcon />
+                <Micro>Cerrar sesión</Micro>
+              {/* </Button> */}
+            </Li>
+          </List>
+        </NavBar>
+      </Header>
+      <HeaderSeparator />
+    </>
   );
 };
 

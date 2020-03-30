@@ -10,7 +10,7 @@ export const Paragraph = styled.p`
 `;
 
 export const Micro = styled.p`
-  font-size: 0.7em;
+  font-size: 0.8em;
 `;
 
 export const Link = styled.a`
