@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import { Micro } from 'components/fonts';
 import Logo from 'components/Logo';
 import {
@@ -11,24 +11,25 @@ import {
 } from './styles';
 
 const NavHeader = () => {
-  const [showHeader, setShowHeader] = useState(true);
+  const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
+  const [show, setShow] = useState(true);
 
-  const HideShowHeader = prevScrollPos => {
+  const HandleScroll = () => {
     const currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-      setShowHeader(true);
-    } else {
-      setShowHeader(false);
-    }
-    return prevScrollPos = currentScrollPos;
-  }
+    setShow(prevScrollpos > currentScrollPos);
+    setPrevScrollpos(currentScrollPos);
+  };
 
-  let prevScrollPos = window.pageYOffset;
-  window.onscroll = HideShowHeader(prevScrollPos);
+  useEffect(() => {
+    window.addEventListener('scroll', HandleScroll);
+    return () => {
+      window.removeEventListener('scroll', HandleScroll)
+    };
+  });
 
   return (
     <>
-      <Header show={showHeader}>
+      <Header show={show}>
         <NavBar>
           <List>
             <Li>
