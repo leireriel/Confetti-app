@@ -1,14 +1,27 @@
 import React, { memo } from 'react';
-import { ButtonShape, RippleContainer, Ripple } from './styles';
+import {
+  green,
+  lightGreen,
+  gray,
+  lightGray,
+  red,
+  lightRed,
+} from 'constants/colors';
+import Ripple from './Ripple';
+import { ButtonEl } from './styles';
 
 const Button = ({ children, type }) => {
+  const types = {
+    primary: [green, lightGreen],
+    disabled: [gray, lightGray],
+    warning: [red, lightRed],
+  };
+
   return (
-    <ButtonShape type={type}>
-      <RippleContainer>
-        <Ripple />
-        {children}
-      </RippleContainer>
-    </ButtonShape>
+    <ButtonEl type={type}>
+      {children}
+      <Ripple />
+    </ButtonEl>
   );
 };
 
