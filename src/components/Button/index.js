@@ -1,10 +1,13 @@
 import React, { memo } from 'react';
-import { ButtonShape } from './styles';
+import { ButtonShape, RippleContainer, Ripple } from './styles';
 
 const Button = ({ children, type }) => {
   return (
     <ButtonShape type={type}>
-      {children}
+      <RippleContainer>
+        <Ripple />
+        {children}
+      </RippleContainer>
     </ButtonShape>
   );
 };
