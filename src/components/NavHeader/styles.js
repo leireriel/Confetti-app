@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { yellow } from 'constants/colors';
+import { white, lightGray } from 'constants/colors';
 import { device } from 'constants/device';
 import userIcon from 'assets/user.svg';
 
 export const Header = styled.header`
-  background-color: ${yellow};
+  background-color: ${white};
   display: flex;
   align-items: center;
   padding: 0 1em;
@@ -14,6 +14,7 @@ export const Header = styled.header`
   transition: top 0.3s;
   width: 100%;
   box-sizing: border-box;
+  box-shadow: 0 0 10px 1px ${lightGray};
 
   @media ${device.tablet} {
     padding: 0 2em;

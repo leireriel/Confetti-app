@@ -1,6 +1,7 @@
 import React, { memo, useState, useEffect } from 'react';
 import { Micro } from 'components/fonts';
 import Logo from 'components/Logo';
+import Button from 'components/Button';
 import {
   Header,
   NavBar,
@@ -36,10 +37,10 @@ const NavHeader = () => {
               <Logo columnDirection={false}/>
             </Li>
             <Li>
-              {/* <Button> */}
+              <Button type='primary'>
                 <UserIcon />
-                <Micro>Cerrar sesión</Micro>
-              {/* </Button> */}
+                <Micro margin={false}>Silvinho</Micro>
+              </Button>
             </Li>
           </List>
         </NavBar>
