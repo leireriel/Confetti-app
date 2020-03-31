@@ -15,6 +15,7 @@ export const Header = styled.header`
   width: 100%;
   box-sizing: border-box;
   box-shadow: 0 0 10px 1px ${lightGray};
+  user-select: none;
 
   @media ${device.tablet} {
     padding: 0 2em;

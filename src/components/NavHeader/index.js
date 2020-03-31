@@ -15,16 +15,16 @@ const NavHeader = () => {
   const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
   const [show, setShow] = useState(true);
 
-  const HandleScroll = () => {
+  const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
     setShow(prevScrollpos > currentScrollPos);
     setPrevScrollpos(currentScrollPos);
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', HandleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('scroll', HandleScroll)
+      window.removeEventListener('scroll', handleScroll)
     };
   });
 

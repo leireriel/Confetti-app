@@ -5,7 +5,7 @@ import {
   gray,
   lightGray,
   red,
-  lightRed,
+  lightRed
 } from 'constants/colors';
 import Ripple from './Ripple';
 import { ButtonEl } from './styles';
@@ -14,7 +14,7 @@ const Button = ({ children, type }) => {
   const types = {
     primary: [green, lightGreen],
     disabled: [gray, lightGray],
-    warning: [red, lightRed],
+    warning: [red, lightRed]
   };
 
   return (
