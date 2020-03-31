@@ -11,7 +11,7 @@ The app will have a calendar view and a detail view so you can edit the data of 
 
 ## 📅 What am I working on now
 
-- [x] Create *react.js* project structure :)
+- [x] Create **react.js** project structure :)
 - [ ] Logo, icons, fonts, palette
 - [x] Integrate styled-components
 - [ ] Button component (I recreated the material design ripple effect with some help from [this post](https://dev.to/rohanfaiyazkhan/recreating-the-material-design-ripple-effect-in-react-54p))
@@ -25,7 +25,7 @@ The app will have a calendar view and a detail view so you can edit the data of 
 - [ ] Review prop-types and defaultProps
 - [ ] Tests
 
-- [ ] Create *react native* project structure!
+- [ ] Create **react native** project structure!
 
 ## 🏗️ Getting started
 
