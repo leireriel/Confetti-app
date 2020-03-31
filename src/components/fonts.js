@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { blue, pink } from 'constants/colors';
+import { purple, pink } from 'constants/colors';
 
 export const Title = styled.h1`
   font-size: 2em;
@@ -10,11 +10,12 @@ export const Paragraph = styled.p`
 `;
 
 export const Micro = styled.p`
-  font-size: 0.7em;
+  font-size: 0.8em;
+  margin: ${props => props.margin ? 'default' : '0'};
 `;
 
 export const Link = styled.a`
-  color: ${blue};
+  color: ${purple};
   text-decoration: none;
 
   &:hover {

@@ -1,24 +1,17 @@
-// chicken logo
-export const yellow = '#ffd72e';
-export const yellowDark = '#ffbf0b';
-export const orange = '#f36d21';
+// palette
+export const pink = '#F00699';
+export const lightPink = '#FABBE3';
+export const green = '#3AB795';
+export const lightGreen = '#C9EBE2';
+export const purple = '#623CEA';
+export const lightPurple = '#D4C9F9';
 
 // grayscale
-export const black = '#242423';
-export const grayDark = '#333533';
-export const gray = '#CFDBD5';
-export const platinum = '#E8EDDF';
+export const black = '#232323';
+export const gray = '#707070';
+export const lightGray = '#EDEDED';
 export const white = '#FFFFFF';
 
 // validations
-export const blue = '#5995ED';
-export const green = '#B9E28C';
-export const red = '#FB4D3D';
-
-// grapescale
-export const grapePurple = '#5B507A';
-export const grapeBlue = '#5B618A';
-export const grapeGray = '#9EADC8';
-
-// bright colors
-export const pink = '#F00699';
+export const red = '#D1272A';
+export const lightRed = '#F2C4C4';
