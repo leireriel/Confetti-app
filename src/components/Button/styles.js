@@ -18,7 +18,5 @@ export const ButtonEl = styled.button`
   }
 `;
 
-// ripple effect on button
-// hover button
 // types button como array de components
 // logo pintar con lineas diagonales /
