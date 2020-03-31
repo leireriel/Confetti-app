@@ -7,6 +7,7 @@ export const Title = styled.h1`
 
 export const Paragraph = styled.p`
   font-size: 1em;
+  margin: ${props => props.margin ? 'default' : '0'};
 `;
 
 export const Micro = styled.p`

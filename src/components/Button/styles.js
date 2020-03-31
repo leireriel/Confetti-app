@@ -22,6 +22,3 @@ export const ButtonBase = styled.button`
     color: ${props => !props.disabled && props.contrast};
   }
 `;
-
-// types button como array de components
-// logo pintar con lineas diagonales /

@@ -1,7 +1,7 @@
 import React, { memo, useState, useEffect } from 'react';
 import { Micro } from 'components/fonts';
 import Logo from 'components/Logo';
-import Button from 'components/Button';
+import Dropdown from 'components/Dropdown';
 import {
   Header,
   NavBar,
@@ -37,10 +37,10 @@ const NavHeader = () => {
               <Logo columnDirection={false}/>
             </Li>
             <Li>
-              <Button type='primary'>
-                {/* <UserIcon /> */}
+              <Dropdown>
+                <UserIcon />
                 <Micro margin={false}>Silvinho</Micro>
-              </Button>
+              </Dropdown>
             </Li>
           </List>
         </NavBar>

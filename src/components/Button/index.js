@@ -9,7 +9,7 @@ import {
   lightRed,
   white
 } from 'constants/colors';
-import Ripple from './Ripple';
+import Ripple from 'components/Effects/Ripple';
 import { ButtonBase } from './styles';
 
 const types = {

@@ -24,3 +24,7 @@ export const RippleContainer = styled.div`
     }
   }
 `;
+
+// Parent element (for example, button) must contain these styles:
+// position: relative;
+// overflow: hidden;
