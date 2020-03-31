@@ -7,7 +7,6 @@ import {
   NavBar,
   List,
   Li,
-  UserIcon,
   HeaderSeparator,
 } from './styles';
 
@@ -38,7 +37,6 @@ const NavHeader = () => {
             </Li>
             <Li>
               <Dropdown>
-                <UserIcon />
                 <Micro margin={false}>Silvinho</Micro>
               </Dropdown>
             </Li>

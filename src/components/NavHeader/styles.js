@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { white, lightGray } from 'constants/colors';
 import { device } from 'constants/device';
-import userIcon from 'assets/user.svg';
 
 export const Header = styled.header`
   background-color: ${white};
@@ -39,13 +38,6 @@ export const Li = styled.li`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-`;
-
-export const UserIcon = styled.img.attrs({
-  src: userIcon,
-  alt: 'Ajustes de usuaria/o y cerrar sesión',
-})`
-  width: 2em;
 `;
 
 export const HeaderSeparator = styled.div`

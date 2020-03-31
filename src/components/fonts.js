@@ -8,11 +8,13 @@ export const Title = styled.h1`
 export const Paragraph = styled.p`
   font-size: 1em;
   margin: ${props => props.margin ? 'default' : '0'};
+  padding: ${props => props.padding || 'default'}
 `;
 
 export const Micro = styled.p`
   font-size: 0.8em;
   margin: ${props => props.margin ? 'default' : '0'};
+  padding: ${props => props.padding || 'default'}
 `;
 
 export const Link = styled.a`

@@ -17,8 +17,9 @@ The app will have a calendar view and a detail view so you can edit the data of 
 - [ ] Header that hides on scroll down
 - [ ] Button component (I recreated the material design ripple effect with some help from [this post](https://dev.to/rohanfaiyazkhan/recreating-the-material-design-ripple-effect-in-react-54p))
 - [ ] Dropdown component
+- logo de colores / y quizas titulo
 - [ ] Uso de memo
-- [ ] Integrate Redux or React Context API
+- [ ] Integrate Redux or React Context API - https://dev.to/rohanfaiyazkhan/sharing-more-with-react-s-context-api-e52
 - [ ] Routes: login/register and app (react-router-dom)
 - [ ] Login and register services
 - [ ] Calendar
