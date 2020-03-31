@@ -1,20 +1,25 @@
 import styled from 'styled-components';
-import { white, black, pink } from 'constants/colors';
 
-export const ButtonEl = styled.button`
+export const ButtonBase = styled.button`
   display: flex;
+  justify-content: center;
   align-items: center;
-  cursor: pointer;
-  background-color: ${white};
-  box-shadow: inset 0 0 0 1px ${props => props.type === 'primary' ? pink : black};
+  padding: 8px 12px;
+  min-width: 5em;
+  cursor: ${props => props.disabled ? 'default' : 'pointer'};
+  background-color: ${props => props.contrast};
+  color: ${props => props.color};
+  box-shadow: inset 0 0 0 1px ${props => props.color};
   border: none;
   border-radius: 6px;
   outline: 0;
+  // both next ones are for the ripple effect
   position: relative;
   overflow: hidden;
-  
+
   &:hover {
-    box-shadow: inset 0 0 0 2px ${props => props.type === 'primary' ? pink : black};
+    background-color: ${props => !props.disabled && props.color};
+    color: ${props => !props.disabled && props.contrast};
   }
 `;
 

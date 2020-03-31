@@ -38,7 +38,7 @@ const NavHeader = () => {
             </Li>
             <Li>
               <Button type='primary'>
-                <UserIcon />
+                {/* <UserIcon /> */}
                 <Micro margin={false}>Silvinho</Micro>
               </Button>
             </Li>
