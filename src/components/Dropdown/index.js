@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Paragraph } from 'components/fonts';
 import { pink } from 'constants/colors';
 // import Ripple from 'components/Effects/Ripple';
-import Chevron from 'assets/ChevronSVG';
+import Chevron from 'assets/Chevron';
 import { Button } from './styles';
 
 const Dropdown = ({ title, options, changeTitle }) => {
@@ -14,7 +14,7 @@ const Dropdown = ({ title, options, changeTitle }) => {
       color={pink}
     >
       <Paragraph>{titleButton}</Paragraph>
-      <Chevron ariaLabel='Abrir menú desplegable' color={pink} />
+      <Chevron color={pink} />
       {/* <Ripple rippleColor={lightPink} /> */}
     </Button>
   );
@@ -24,14 +24,6 @@ const Dropdown = ({ title, options, changeTitle }) => {
 // https://cabify.com/es
 // pintar svg de rosa
 // texto de dropdown sustituya al principal
-
-// export const ChevronIcon = styled.img.attrs({
-//   src: chevronIcon,
-//   alt: 'Abrir menú desplegable',
-// })`
-//   width: 1em;
-//   padding-left: 0.5em;
-// `;
 
 Dropdown.propTypes = {
   title: PropTypes.string.isRequired,

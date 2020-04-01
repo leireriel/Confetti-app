@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { black } from 'constants/colors';
 
-const ChevronSVG = ({ color=black }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill={color} viewBox="0 0 40 20">
+const Chevron = ({ color=black, width='1em' }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill={color} width={width} viewBox="0 0 40 20">
     <title>chevron-down@1x</title>
       <g id="Layer_2" data-name="Layer 2">
         <g id="Arrows">
@@ -14,4 +15,9 @@ const ChevronSVG = ({ color=black }) => (
   </svg>
 );
 
-export default ChevronSVG;
+Chevron.propTypes = {
+  color: PropTypes.string,
+  width: PropTypes.string
+};
+
+export default Chevron;

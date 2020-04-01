@@ -14,4 +14,8 @@ export const Button = styled.button`
   border: none;
   border-radius: 6px;
   outline: 0;
+
+  svg {
+    padding-left: 0.5em;
+  }
 `;
