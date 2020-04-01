@@ -22,7 +22,6 @@ const Dropdown = ({ title, options, changeTitle }) => {
 
 // https://react-bootstrap.github.io/components/dropdowns/
 // https://cabify.com/es
-// pintar svg de rosa
 // texto de dropdown sustituya al principal
 
 Dropdown.propTypes = {
