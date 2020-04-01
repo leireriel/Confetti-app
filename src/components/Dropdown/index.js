@@ -18,6 +18,7 @@ const Dropdown = ({ children }) => (
 
 // https://react-bootstrap.github.io/components/dropdowns/
 // https://cabify.com/es
+// pintar svg de rosa
 
 Dropdown.propTypes = {
   children: PropTypes.oneOfType([

@@ -18,7 +18,7 @@ const types = {
   warning: [red, lightRed]
 };
 
-const Button = ({ children, type }) => {
+const Button = ({ children, type, margin }) => {
   const [colors, setColors] = useState([]);
 
   useEffect(() => {
@@ -39,6 +39,7 @@ const Button = ({ children, type }) => {
       color={colors[0]}
       contrast={type === 'disabled' ? colors[1] : white}
       disabled={type === 'disabled'}
+      margin={margin}
     >
       {children}
       {type !== 'disabled' && (
@@ -53,7 +54,8 @@ Button.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
+  margin: PropTypes.string
 };
 
 Button.defaultProps = {

@@ -9,10 +9,11 @@ export const ButtonBase = styled.button`
   cursor: ${props => props.disabled ? 'default' : 'pointer'};
   background-color: ${props => props.contrast};
   color: ${props => props.color};
-  box-shadow: inset 0 0 0 1px ${props => props.color};
+  box-shadow: ${props => props.disabled ? 'none' : `inset 0 0 0 1px ${props.color}`};
   border: none;
   border-radius: 6px;
   outline: 0;
+  margin: ${props => props.margin};
   // both next ones are for the ripple effect
   position: relative;
   overflow: hidden;
