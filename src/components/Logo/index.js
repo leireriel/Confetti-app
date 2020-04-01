@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import ChickenShape from 'assets/ChickenShape';
+import Chicken from 'assets/Chicken';
 import { LogoWrapper, LogoText } from './styles';
 
 const Logo = ({ 
@@ -10,7 +10,7 @@ const Logo = ({
 }) => (
   <LogoWrapper columnDirection={columnDirection}>
     {img && (
-      <ChickenShape width={imgWidth} />
+      <Chicken width={imgWidth} />
     )}
     {text && (
       <LogoText>Confetti</LogoText>
