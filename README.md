@@ -24,6 +24,7 @@ The app will have a calendar view and a detail view so you can edit the data of 
 - [ ] Login and register services
 - [ ] Calendar
 - [ ] Modal component
+- [ ] 'We have placed cookies on your computer to help make this website better'
 ...
 - [ ] Review prop-types and defaultProps
 - [ ] Tests

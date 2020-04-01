@@ -1,5 +1,4 @@
 import React, { memo, useState, useEffect } from 'react';
-import { Micro } from 'components/fonts';
 import Logo from 'components/Logo';
 import Dropdown from 'components/Dropdown';
 import {
@@ -36,9 +35,11 @@ const NavHeader = () => {
               <Logo columnDirection={false}/>
             </Li>
             <Li>
-              <Dropdown>
-                <Micro margin={false}>Silvinho</Micro>
-              </Dropdown>
+              <Dropdown
+                title='Silvinho'
+                options={['Ajustes', 'Cerrar sesión']}
+                changeTitle={false}
+              />
             </Li>
           </List>
         </NavBar>

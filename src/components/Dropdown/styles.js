@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { white } from 'constants/colors';
-import chevronIcon from 'assets/chevron.svg';
 
 export const Button = styled.button`
   display: flex;
@@ -15,12 +14,4 @@ export const Button = styled.button`
   border: none;
   border-radius: 6px;
   outline: 0;
-`;
-
-export const ChevronIcon = styled.img.attrs({
-  src: chevronIcon,
-  alt: 'Abrir menú desplegable',
-})`
-  width: 1em;
-  padding-left: 0.5em;
 `;
