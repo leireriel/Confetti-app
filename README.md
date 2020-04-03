@@ -1,6 +1,7 @@
 # Confetti 🎉
 
-<!-- Captura de la app -->
+![Confetti Logo](/src/assets/Chicken.js)
+
 <!-- Create your account now! ➜ (link) -->
 
 ## 👀 What is this?
@@ -82,8 +83,8 @@ To generate a production ready version on `docs` folder:
 Now you can upload your public folder to GitHub Pages or similar :)
 
 ## 🎨 Attributions
-* Our chicken icon is a free icon by [stockio.com](https://www.stockio.com/)
-* Favicon generated on [realfavicongenerator.net](https://realfavicongenerator.net/)
+* Our chicken icon is a free icon by [stockio.com](https://www.stockio.com/) then edited by me
+* Favicon generated on [realfavicongenerator.net](https://realfavicongenerator.net/) -- hacer otra vez
 * Palette from [coolors.co](https://coolors.co/)
 
 ## 🤜🤛 Suggestions
