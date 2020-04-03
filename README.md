@@ -1,4 +1,4 @@
-# ![Confetti Name](/src/assets/confetti.png) ![Confetti Logo](/src/assets/chicken.svg)
+<img src="/src/assets/confetti.png" alt="Confetti" height="100px"> ![Confetti logo](/src/assets/chicken.svg)
 
 <!-- Create your account now! ➜ (link) -->
 
