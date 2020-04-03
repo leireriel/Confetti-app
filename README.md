@@ -1,6 +1,6 @@
 # Confetti 🎉
 
-![Confetti Logo](/src/assets/Chicken.js)
+![Confetti Logo](/src/assets/Chicken.svg)
 
 <!-- Create your account now! ➜ (link) -->
 
