@@ -1,17 +1,15 @@
 // palette
-export const pink = '#F00699';
-export const lightPink = '#FABBE3';
-export const green = '#3AB795';
-export const lightGreen = '#C9EBE2';
-export const purple = '#623CEA';
-export const lightPurple = '#D4C9F9';
+export const red = '#EF476F';
+export const lightRed = '#FACCD7';
+export const yellow = '#FFD166';
+export const lightYellow = '#FFF2D5';
+export const green = '#06D6A0';
+export const lightGreen = '#BBF3E5';
+export const blue = '#118AB2';
+export const lightBlue = '#BEDFEA';
 
 // grayscale
-export const black = '#232323';
-export const gray = '#707070';
-export const lightGray = '#EDEDED';
+export const black = '#073B4C';
+export const gray = '#BBC9CE';
+export const lightGray= '#E8F8FF';
 export const white = '#FFFFFF';
-
-// validations
-export const red = '#D1272A';
-export const lightRed = '#F2C4C4';

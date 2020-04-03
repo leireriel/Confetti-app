@@ -14,13 +14,17 @@ The app will have a calendar view and a detail view so you can edit the data of 
 - [x] Create **react.js** project structure :)
 - [ ] Logo, icons, fonts, palette
 - [x] Integrate styled-components
-- [ ] Button component (I recreated the material design ripple effect with some help from [this post](https://dev.to/rohanfaiyazkhan/recreating-the-material-design-ripple-effect-in-react-54p))
 - [ ] Header that hides on scroll down
-- [ ] Integrate Redux
+- [ ] Button component (I recreated the material design ripple effect with some help from [this post](https://dev.to/rohanfaiyazkhan/recreating-the-material-design-ripple-effect-in-react-54p))
+- [ ] Dropdown component
+- logo de colores / y quizas titulo
+- [ ] Uso de memo
+- [ ] Integrate Redux or React Context API - https://dev.to/rohanfaiyazkhan/sharing-more-with-react-s-context-api-e52
 - [ ] Routes: login/register and app (react-router-dom)
 - [ ] Login and register services
 - [ ] Calendar
 - [ ] Modal component
+- [ ] 'We have placed cookies on your computer to help make this website better'
 ...
 - [ ] Review prop-types and defaultProps
 - [ ] Tests

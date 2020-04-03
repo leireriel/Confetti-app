@@ -1,4 +1,5 @@
 import React, { memo, useState, useLayoutEffect } from 'react';
+import PropTypes from 'prop-types';
 import { RippleContainer } from './styles';
 
 const useDebouncedRippleCleanUp = (rippleCount, duration, cleanUpFunction) => {
@@ -17,7 +18,7 @@ const useDebouncedRippleCleanUp = (rippleCount, duration, cleanUpFunction) => {
   }, [rippleCount, duration, cleanUpFunction]);
 };
 
-const Ripple = () => {
+const Ripple = ({ rippleColor }) => {
   const [rippleArray, setRippleArray] = useState([]);
   const duration = 850;
 
@@ -43,7 +44,7 @@ const Ripple = () => {
   };
 
   return (
-    <RippleContainer duration={duration} onMouseDown={handleAddRipple}>
+    <RippleContainer rippleColor={rippleColor} duration={duration} onMouseDown={handleAddRipple}>
       {
         rippleArray.length > 0 &&
         rippleArray.map((ripple, index) => (
@@ -60,6 +61,10 @@ const Ripple = () => {
       }
     </RippleContainer>
   );
+};
+
+Ripple.propTypes = {
+  rippleColor: PropTypes.string
 };
 
 export default memo(Ripple);

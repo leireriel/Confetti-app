@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
-import { LogoWrapper, LogoText, LogoImg } from './styles';
+import Chicken from 'assets/Chicken';
+import { LogoWrapper, LogoText } from './styles';
 
 const Logo = ({ 
   text,
@@ -7,9 +8,9 @@ const Logo = ({
   imgWidth,
   columnDirection
 }) => (
-  <LogoWrapper columnDirection={columnDirection} >
+  <LogoWrapper columnDirection={columnDirection}>
     {img && (
-      <LogoImg imgWidth={imgWidth} />
+      <Chicken width={imgWidth} />
     )}
     {text && (
       <LogoText>Confetti</LogoText>

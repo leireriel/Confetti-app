@@ -1,13 +1,11 @@
 import React, { memo, useState, useEffect } from 'react';
-import { Micro } from 'components/fonts';
 import Logo from 'components/Logo';
-import Button from 'components/Button';
+import Dropdown from 'components/Dropdown';
 import {
   Header,
   NavBar,
   List,
   Li,
-  UserIcon,
   HeaderSeparator,
 } from './styles';
 
@@ -37,10 +35,11 @@ const NavHeader = () => {
               <Logo columnDirection={false}/>
             </Li>
             <Li>
-              <Button type='primary'>
-                <UserIcon />
-                <Micro margin={false}>Silvinho</Micro>
-              </Button>
+              <Dropdown
+                title='Silvinho'
+                options={['Ajustes', 'Cerrar sesión']}
+                changeTitle={false}
+              />
             </Li>
           </List>
         </NavBar>

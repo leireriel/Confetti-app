@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { lightPink } from 'constants/colors';
 
 export const RippleContainer = styled.div`
   position: absolute;
@@ -13,7 +12,7 @@ export const RippleContainer = styled.div`
     border-radius: 100%;
     position: absolute;
     opacity: 0.75;
-    background-color: ${lightPink};
+    background-color: ${props => props.rippleColor};
     animation-name: ripple;
     animation-duration: ${props => props.duration}ms;
   }
@@ -25,3 +24,7 @@ export const RippleContainer = styled.div`
     }
   }
 `;
+
+// Parent element (for example, button) must contain these styles:
+// position: relative;
+// overflow: hidden;
