@@ -1,7 +1,7 @@
 import React, { memo, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Paragraph } from 'components/fonts';
-import { pink } from 'constants/colors';
+import { blue } from 'constants/colors';
 // import Ripple from 'components/Effects/Ripple';
 import Chevron from 'assets/Chevron';
 import { Button } from './styles';
@@ -9,13 +9,14 @@ import { Button } from './styles';
 const Dropdown = ({ title, options, changeTitle }) => {
   const [titleButton, setTitleButton] = useState(title);
 
+  // esto tiene que ser un select LOOOL
   return (
     <Button
-      color={pink}
+      color={blue}
     >
       <Paragraph>{titleButton}</Paragraph>
-      <Chevron color={pink} />
-      {/* <Ripple rippleColor={lightPink} /> */}
+      <Chevron color={blue} />
+      {/* <Ripple rippleColor={lightBlue} /> */}
     </Button>
   );
 };

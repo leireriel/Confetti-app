@@ -7,9 +7,9 @@ export const ButtonBase = styled.button`
   padding: 8px 12px;
   min-width: 5em;
   cursor: ${props => props.disabled ? 'default' : 'pointer'};
-  background-color: ${props => props.contrast};
+  background-color: ${props => props.background};
   color: ${props => props.color};
-  box-shadow: ${props => props.disabled ? 'none' : `inset 0 0 0 1px ${props.color}`};
+  box-shadow: ${props => `inset 0 0 0 1px ${props.color}`};
   border: none;
   border-radius: 6px;
   outline: 0;
@@ -20,6 +20,6 @@ export const ButtonBase = styled.button`
 
   &:hover {
     background-color: ${props => !props.disabled && props.color};
-    color: ${props => !props.disabled && props.contrast};
+    color: ${props => !props.disabled && props.background};
   }
 `;

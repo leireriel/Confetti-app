@@ -37,7 +37,7 @@ const Button = ({ children, type, margin }) => {
   return (
     <ButtonBase 
       color={colors[0]}
-      contrast={type === 'disabled' ? colors[1] : white}
+      background={white}
       disabled={type === 'disabled'}
       margin={margin}
     >
