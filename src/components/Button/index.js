@@ -1,25 +1,17 @@
 import React, { memo, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import {
-  green,
-  lightGreen,
-  gray,
-  lightGray,
-  red,
-  lightRed,
-  white
-} from 'constants/colors';
+import { green, gray, red, white, opaqueWhite } from 'constants/colors';
 import Ripple from 'components/Effects/Ripple';
 import { ButtonBase } from './styles';
 
 const types = {
-  primary: [green, lightGreen],
-  disabled: [gray, lightGray],
-  warning: [red, lightRed]
+  primary: green,
+  disabled: gray,
+  warning: red
 };
 
 const Button = ({ children, type, margin }) => {
-  const [colors, setColors] = useState([]);
+  const [color, setColor] = useState('');
 
   useEffect(() => {
     selectType();
@@ -28,22 +20,22 @@ const Button = ({ children, type, margin }) => {
   const selectType = () => {
     const typeSelected = types[type];
     if (typeSelected) {
-      setColors(typeSelected);
+      setColor(typeSelected);
     } else {
-      setColors(types.primary);
+      setColor(types.primary);
     }
   };
 
   return (
     <ButtonBase 
-      color={colors[0]}
+      color={color}
       background={white}
       disabled={type === 'disabled'}
       margin={margin}
     >
       {children}
       {type !== 'disabled' && (
-        <Ripple rippleColor={colors[1]} />
+        <Ripple rippleColor={opaqueWhite} />
       )}
     </ButtonBase>
   );

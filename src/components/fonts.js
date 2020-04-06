@@ -20,8 +20,11 @@ export const Micro = styled.p`
 export const Link = styled.a`
   color: ${props => props.contrast ? white : blue};
   text-decoration: none;
+  font-weight: 300;
 
   &:hover {
     color: ${green};
+    text-decoration: underline;
+    transition: all 0.5s ease;
   }
 `;

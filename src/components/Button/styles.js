@@ -14,6 +14,9 @@ export const ButtonBase = styled.button`
   border-radius: 6px;
   outline: 0;
   margin: ${props => props.margin};
+  text-transform: uppercase;
+  font-weight: 700;
+
   // both next ones are for the ripple effect
   position: relative;
   overflow: hidden;
@@ -21,5 +24,6 @@ export const ButtonBase = styled.button`
   &:hover {
     background-color: ${props => !props.disabled && props.color};
     color: ${props => !props.disabled && props.background};
+    transition: all 1s ease;
   }
 `;
