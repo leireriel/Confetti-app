@@ -33,3 +33,8 @@ export const List = styled.ol`
   margin: 0;
   padding: 0;
 `;
+
+export const Li = styled.li`
+  display: flex;
+  justify-content: flex-start;
+`;

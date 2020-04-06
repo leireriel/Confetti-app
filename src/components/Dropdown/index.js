@@ -1,10 +1,10 @@
 import React, { memo, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Paragraph } from 'components/fonts';
+import { Paragraph, Link } from 'components/fonts';
 import { blue } from 'constants/colors';
 // import Ripple from 'components/Effects/Ripple';
 import Chevron from 'assets/Chevron';
-import { Button, ButtonTitle, NavOptions, List } from './styles';
+import { Button, ButtonTitle, NavOptions, List, Li } from './styles';
 
 const Dropdown = ({ title, options }) => {
   const [showOptions, setShowOptions] = useState(false);
@@ -26,7 +26,9 @@ const Dropdown = ({ title, options }) => {
           <NavOptions>
             <List>
               {options.map((option, index) => (
-                <li key={index}>{option}</li>
+                <Li key={index}>
+                  <Link href='#fd'>{option}</Link>
+                </Li>
               ))}
             </List>
           </NavOptions>
