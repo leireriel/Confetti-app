@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import { device } from 'constants/device';
-import { blue, white } from 'constants/colors';
+import { green } from 'constants/colors';
 
 export const FooterWrapper = styled.footer`
-  background-color: ${blue};
-  color: ${white};
+  border-top: 1px solid ${green};
   padding: 0.5em 1em;
   display: flex;
   justify-content: center;

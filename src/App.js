@@ -1,14 +1,16 @@
 import React, { memo } from 'react';
 import { Paragraph } from 'components/fonts';
+import { MainWithConfetti, WrapperSection } from 'components/containers';
 import NavHeader from 'components/NavHeader';
-import { MainWithConfetti } from 'components/containers';
 import Footer from 'components/Footer';
 
 const App = () => (
   <>
     <NavHeader />
     <MainWithConfetti>
-      <Paragraph>dsfjskl</Paragraph>
+      <WrapperSection>
+        <Paragraph>hola</Paragraph>
+      </WrapperSection>
     </MainWithConfetti>
     <Footer />
   </>

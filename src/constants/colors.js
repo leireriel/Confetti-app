@@ -13,3 +13,6 @@ export const black = '#073B4C';
 export const gray = '#BBC9CE';
 export const lightGray= '#E8F8FF';
 export const white = '#FFFFFF';
+
+// opacity
+export const opaqueWhite = 'rgba(255, 255, 255, 0.8)';

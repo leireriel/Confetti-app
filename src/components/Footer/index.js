@@ -7,7 +7,7 @@ const Footer = () => {
     <FooterWrapper>
       <List>
         <li>
-          <Link contrast={true} href='#f'>
+          <Link href='#f'>
             <Micro>Sobre nosotros</Micro>
           </Link>
         </li>
