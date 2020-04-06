@@ -1,6 +1,6 @@
 import React, { memo, useState, useEffect } from 'react';
 import Logo from 'components/Logo';
-import Dropdown from 'components/Dropdown';
+import Select from 'components/Select';
 import {
   Header,
   NavBar,
@@ -33,7 +33,7 @@ const NavHeader = () => {
             <Logo columnDirection={false}/>
           </Li>
           <Li>
-            <Dropdown
+            <Select
               title='Silvinho'
               options={['Ajustes', 'Cerrar sesión']}
               changeTitle={false}

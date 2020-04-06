@@ -11,13 +11,12 @@ The app will have a calendar view and a detail view so you can edit the data of 
 ## 📅 What am I working on now
 
 - [x] Create **react.js** project structure :)
-- [ ] Logo, icons, fonts, palette
+- [x] Logo, icons, fonts, palette
 - [x] Integrate styled-components
-- [ ] Header that hides on scroll down
-- [ ] Button component (I recreated the material design ripple effect with some help from [this post](https://dev.to/rohanfaiyazkhan/recreating-the-material-design-ripple-effect-in-react-54p))
-- [ ] Select component
-- [ ] Component that receives string and returns colored string to render (red, yellow, green, blue)
-- logo de colores / y quizas titulo
+- [x] Header that hides on scroll down
+- [x] Button component (I recreated the material design ripple effect with some help from [this post](https://dev.to/rohanfaiyazkhan/recreating-the-material-design-ripple-effect-in-react-54p))
+- [wip] Select component
+- [?] Component that receives string and returns colored string to render (red, yellow, green, blue)
 - [ ] Uso de memo
 - [ ] Integrate Redux or React Context API - https://dev.to/rohanfaiyazkhan/sharing-more-with-react-s-context-api-e52
 - [ ] Routes: login/register and app (react-router-dom)
