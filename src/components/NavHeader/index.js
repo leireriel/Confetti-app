@@ -1,6 +1,7 @@
 import React, { memo, useState, useEffect } from 'react';
 import Logo from 'components/Logo';
-import Select from 'components/Select';
+import Dropdown from 'components/Dropdown';
+import Button from 'components/Button';
 import {
   Header,
   NavBar,
@@ -33,10 +34,12 @@ const NavHeader = () => {
             <Logo columnDirection={false}/>
           </Li>
           <Li>
-            <Select
+            <Button>Tigretón</Button>
+            <Button type='warning'>Tigretón</Button>
+            <Button type='disabled'>Tigretón</Button>
+            <Dropdown
               title='Silvinho'
               options={['Ajustes', 'Cerrar sesión']}
-              changeTitle={false}
             />
           </Li>
         </List>
