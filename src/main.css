@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #073B4C;
+  background-color: #FFFFFF;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

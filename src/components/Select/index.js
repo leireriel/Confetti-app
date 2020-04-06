@@ -6,10 +6,9 @@ import { blue } from 'constants/colors';
 import Chevron from 'assets/Chevron';
 import { Button } from './styles';
 
-const Dropdown = ({ title, options, changeTitle }) => {
+const Select = ({ title, options, changeTitle }) => {
   const [titleButton, setTitleButton] = useState(title);
 
-  // esto tiene que ser un select LOOOL
   return (
     <Button
       color={blue}
@@ -21,14 +20,17 @@ const Dropdown = ({ title, options, changeTitle }) => {
   );
 };
 
-// https://react-bootstrap.github.io/components/dropdowns/
+// https://react-bootstrap.github.io/components/Selects/
 // https://cabify.com/es
-// texto de dropdown sustituya al principal
 
-Dropdown.propTypes = {
+Select.propTypes = {
   title: PropTypes.string.isRequired,
   options: PropTypes.array.isRequired,
-  changeTitle: PropTypes.bool.isRequired
+  changeTitle: PropTypes.bool
 };
 
-export default memo(Dropdown);
+Select.defaultProps = {
+  changeTitle: true
+};
+
+export default memo(Select);

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { red } from 'constants/colors';
 
-const ChickenFill = ({ color=red, width='2em' }) => (
+const Heart = ({ color=red, width='2em' }) => (
   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width={width}>
   <path
     d="M 10,30
@@ -15,9 +15,9 @@ const ChickenFill = ({ color=red, width='2em' }) => (
   </svg>
 );
 
-ChickenFill.propTypes = {
+Heart.propTypes = {
   color: PropTypes.string,
   width: PropTypes.string
 };
 
-export default ChickenFill;
+export default Heart;
