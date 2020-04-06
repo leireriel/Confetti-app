@@ -17,6 +17,7 @@ The app will have a calendar view and a detail view so you can edit the data of 
 - [x] Button component (I recreated the material design ripple effect with some help from [this post](https://dev.to/rohanfaiyazkhan/recreating-the-material-design-ripple-effect-in-react-54p))
 - [wip] Select component
 - [?] Component that receives string and returns colored string to render (red, yellow, green, blue)
+- [ ] Generar nuevo favicon
 - [ ] Uso de memo
 - [ ] Integrate Redux or React Context API - https://dev.to/rohanfaiyazkhan/sharing-more-with-react-s-context-api-e52
 - [ ] Routes: login/register and app (react-router-dom)
@@ -82,8 +83,8 @@ To generate a production ready version on `docs` folder:
 Now you can upload your public folder to GitHub Pages or similar :)
 
 ## 🎨 Attributions
-* Our chicken icon is a free icon by [stockio.com](https://www.stockio.com/) then edited by me
-* Favicon generated on [realfavicongenerator.net](https://realfavicongenerator.net/) -- hacer otra vez
+* Our chicken icon is originally a free icon by [stockio.com](https://www.stockio.com/) then edited by me
+* Favicon generated on [realfavicongenerator.net](https://realfavicongenerator.net/)
 * Palette from [coolors.co](https://coolors.co/)
 
 ## 🤜🤛 Suggestions

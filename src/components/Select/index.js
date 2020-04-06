@@ -9,7 +9,6 @@ import { Button } from './styles';
 const Select = ({ title, options, changeTitle }) => {
   const [titleButton, setTitleButton] = useState(title);
 
-  // esto tiene que ser un select LOOOL
   return (
     <Button
       color={blue}
@@ -23,12 +22,15 @@ const Select = ({ title, options, changeTitle }) => {
 
 // https://react-bootstrap.github.io/components/Selects/
 // https://cabify.com/es
-// texto de Select sustituya al principal
 
 Select.propTypes = {
   title: PropTypes.string.isRequired,
   options: PropTypes.array.isRequired,
-  changeTitle: PropTypes.bool.isRequired
+  changeTitle: PropTypes.bool
+};
+
+Select.defaultProps = {
+  changeTitle: true
 };
 
 export default memo(Select);
