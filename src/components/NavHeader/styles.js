@@ -39,7 +39,3 @@ export const Li = styled.li`
   align-items: center;
   cursor: pointer;
 `;
-
-export const HeaderSeparator = styled.div`
-  margin-top: 3em;
-`;

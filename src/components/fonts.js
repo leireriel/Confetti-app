@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { blue, green } from 'constants/colors';
+import { blue, green, white } from 'constants/colors';
 
 export const Title = styled.h1`
   font-size: 2em;
@@ -18,7 +18,7 @@ export const Micro = styled.p`
 `;
 
 export const Link = styled.a`
-  color: ${blue};
+  color: ${props => props.contrast ? white : blue};
   text-decoration: none;
 
   &:hover {

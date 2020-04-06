@@ -15,7 +15,8 @@ The app will have a calendar view and a detail view so you can edit the data of 
 - [x] Integrate styled-components
 - [ ] Header that hides on scroll down
 - [ ] Button component (I recreated the material design ripple effect with some help from [this post](https://dev.to/rohanfaiyazkhan/recreating-the-material-design-ripple-effect-in-react-54p))
-- [ ] Dropdown component
+- [ ] Select component
+- [ ] Component that receives string and returns colored string to render (red, yellow, green, blue)
 - logo de colores / y quizas titulo
 - [ ] Uso de memo
 - [ ] Integrate Redux or React Context API - https://dev.to/rohanfaiyazkhan/sharing-more-with-react-s-context-api-e52
@@ -25,6 +26,7 @@ The app will have a calendar view and a detail view so you can edit the data of 
 - [ ] Modal component
 - [ ] 'We have placed cookies on your computer to help make this website better'
 ...
+- [ ] About us page
 - [ ] Review prop-types and defaultProps
 - [ ] Tests
 

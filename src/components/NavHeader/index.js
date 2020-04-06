@@ -6,7 +6,6 @@ import {
   NavBar,
   List,
   Li,
-  HeaderSeparator,
 } from './styles';
 
 const NavHeader = () => {
@@ -27,25 +26,22 @@ const NavHeader = () => {
   });
 
   return (
-    <>
-      <Header show={show}>
-        <NavBar>
-          <List>
-            <Li>
-              <Logo columnDirection={false}/>
-            </Li>
-            <Li>
-              <Dropdown
-                title='Silvinho'
-                options={['Ajustes', 'Cerrar sesión']}
-                changeTitle={false}
-              />
-            </Li>
-          </List>
-        </NavBar>
-      </Header>
-      <HeaderSeparator />
-    </>
+    <Header show={show}>
+      <NavBar>
+        <List>
+          <Li>
+            <Logo columnDirection={false}/>
+          </Li>
+          <Li>
+            <Dropdown
+              title='Silvinho'
+              options={['Ajustes', 'Cerrar sesión']}
+              changeTitle={false}
+            />
+          </Li>
+        </List>
+      </NavBar>
+    </Header>
   );
 };
 
