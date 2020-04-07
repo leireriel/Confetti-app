@@ -1,30 +1,42 @@
 import React, { memo, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Paragraph, Link } from 'components/fonts';
-import { blue } from 'constants/colors';
+import { blue, white } from 'constants/colors';
 // import Ripple from 'components/Effects/Ripple';
 import Chevron from 'assets/Chevron';
 import { Button, NavOptions, List, Li } from './styles';
 
+const colors = {
+  main: blue,
+  secondary: white
+};
+
 const Dropdown = ({ title, options }) => {
-  const [showOptions, setShowOptions] = useState(false);
+  const [hover, setHover] = useState(false);
+
+  const { main, secondary } = colors;
 
   return (
     <>
       <Button
-        color={blue}
-        onMouseOver={() => setShowOptions(true)}
-        onMouseOut={() => setShowOptions(false)}
+        onMouseOver={() => setHover(true)}
+        onMouseOut={() => setHover(false)}
+        colorMain={main}
+        colorSecondary={secondary}
+        hover={hover}
       >
         <Paragraph>{title}</Paragraph>
-        <Chevron color={blue} />
+        <Chevron color={hover ? secondary : main} />
 
-        {/* <Ripple rippleColor={lightBlue} /> */}
+        {/* <Ripple rippleColor={opaqueWhite} /> */}
       
       </Button>
 
-      {showOptions && (
-        <NavOptions>
+      {hover && (
+        <NavOptions
+          colorMain={main}
+          colorSecondary={secondary}
+        >
           <List>
             {options.map((option, index) => (
               <Li key={index}>

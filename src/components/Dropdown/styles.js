@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { white } from 'constants/colors';
 
 export const Button = styled.button`
   display: flex;
@@ -8,12 +7,13 @@ export const Button = styled.button`
   padding: 8px 12px;
   min-width: 5em;
   cursor: pointer;
-  background-color: ${white};
-  color: ${props => props.color};
-  box-shadow: inset 0 0 0 1px ${props => props.color};
+  background-color: ${props => props.hover ? props.colorMain : props.colorSecondary};
+  color: ${props => props.hover ? props.colorSecondary : props.colorMain};
+  box-shadow: inset 0 0 0 1px ${props => props.colorMain};
   border: none;
   border-radius: 6px;
   outline: 0;
+  // position: relative;
 
   svg {
     padding-left: 0.5em;
@@ -21,6 +21,12 @@ export const Button = styled.button`
 `;
 
 export const NavOptions = styled.nav`
+  border: 1px solid ${props => props.colorMain};
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 3em;
+  background: ${props => props.colorSecondary}; 
 `;
 
 export const List = styled.ol`
@@ -30,5 +36,5 @@ export const List = styled.ol`
 `;
 
 export const Li = styled.li`
-  padding-top: 0.5em;
+  padding: 0.5em 0;
 `;
