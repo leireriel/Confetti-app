@@ -3,7 +3,6 @@ import { white } from 'constants/colors';
 
 export const Button = styled.button`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 8px 12px;
@@ -15,11 +14,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 6px;
   outline: 0;
-`;
-  
-export const ButtonTitle = styled.div`
-  display: flex;
-  
+
   svg {
     padding-left: 0.5em;
   }
@@ -35,6 +30,5 @@ export const List = styled.ol`
 `;
 
 export const Li = styled.li`
-  display: flex;
-  justify-content: flex-start;
+  padding-top: 0.5em;
 `;

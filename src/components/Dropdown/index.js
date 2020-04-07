@@ -4,7 +4,7 @@ import { Paragraph, Link } from 'components/fonts';
 import { blue } from 'constants/colors';
 // import Ripple from 'components/Effects/Ripple';
 import Chevron from 'assets/Chevron';
-import { Button, ButtonTitle, NavOptions, List, Li } from './styles';
+import { Button, NavOptions, List, Li } from './styles';
 
 const Dropdown = ({ title, options }) => {
   const [showOptions, setShowOptions] = useState(false);
@@ -16,24 +16,24 @@ const Dropdown = ({ title, options }) => {
         onMouseOver={() => setShowOptions(true)}
         onMouseOut={() => setShowOptions(false)}
       >
-        <ButtonTitle>
-          <Paragraph>{title}</Paragraph>
-          <Chevron color={blue} />
-        </ButtonTitle>
+        <Paragraph>{title}</Paragraph>
+        <Chevron color={blue} />
+
         {/* <Ripple rippleColor={lightBlue} /> */}
       
-        {showOptions === showOptions && (
-          <NavOptions>
-            <List>
-              {options.map((option, index) => (
-                <Li key={index}>
-                  <Link href='#fd'>{option}</Link>
-                </Li>
-              ))}
-            </List>
-          </NavOptions>
-        )}
       </Button>
+
+      {showOptions && (
+        <NavOptions>
+          <List>
+            {options.map((option, index) => (
+              <Li key={index}>
+                <Link href='#fd'>{option}</Link>
+              </Li>
+            ))}
+          </List>
+        </NavOptions>
+      )}
     </>
   );
 };
