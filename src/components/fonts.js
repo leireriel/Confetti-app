@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { blue, green, white, lightGray } from 'constants/colors';
+import { blue, green, white } from 'constants/colors';
 
 export const Title = styled.h1`
   font-size: 2em;
