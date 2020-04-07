@@ -7,26 +7,28 @@ export const Button = styled.button`
   padding: 8px 12px;
   min-width: 5em;
   cursor: pointer;
-  background-color: ${props => props.hover ? props.colorMain : props.colorSecondary};
-  color: ${props => props.hover ? props.colorSecondary : props.colorMain};
+  background-color: ${props => props.dropdownVisible ? props.colorMain : props.colorSecondary};
+  color: ${props => props.dropdownVisible ? props.colorSecondary : props.colorMain};
   box-shadow: inset 0 0 0 1px ${props => props.colorMain};
   border: none;
   border-radius: 6px;
   outline: 0;
-  // position: relative;
+  position: relative;
 
   svg {
-    padding-left: 0.5em;
+    padding: ${props => props.dropdownVisible ? '0 0.5em 0 0' : '0 0 0 0.5em'};
+    transform: ${props => props.dropdownVisible && 'rotate(180deg)'};
+    transition: all 0.5s ease;
   }
 `;
 
 export const NavOptions = styled.nav`
+  position: absolute;
+  top: 3em;
   border: 1px solid ${props => props.colorMain};
   border-radius: 6px;
   padding: 8px 12px;
-  position: absolute;
-  top: 3em;
-  background: ${props => props.colorSecondary}; 
+  background: ${props => props.colorSecondary};
 `;
 
 export const List = styled.ol`

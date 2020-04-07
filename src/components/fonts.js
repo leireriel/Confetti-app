@@ -34,8 +34,7 @@ export const Link = styled.a`
     opacity: 0.08;
   }
 
-  &:hover {
+  &:active {
     color: ${green};
-    transition: all 0.5s ease;
   }
 `;

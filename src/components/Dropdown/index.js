@@ -2,7 +2,6 @@ import React, { memo, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Paragraph, Link } from 'components/fonts';
 import { blue, white } from 'constants/colors';
-// import Ripple from 'components/Effects/Ripple';
 import Chevron from 'assets/Chevron';
 import { Button, NavOptions, List, Li } from './styles';
 
@@ -12,27 +11,27 @@ const colors = {
 };
 
 const Dropdown = ({ title, options }) => {
-  const [hover, setHover] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+
+  const handleClick = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
 
   const { main, secondary } = colors;
 
   return (
     <>
       <Button
-        onMouseOver={() => setHover(true)}
-        onMouseOut={() => setHover(false)}
+        onClick={handleClick}
         colorMain={main}
         colorSecondary={secondary}
-        hover={hover}
+        dropdownVisible={dropdownVisible}
       >
         <Paragraph>{title}</Paragraph>
-        <Chevron color={hover ? secondary : main} />
-
-        {/* <Ripple rippleColor={opaqueWhite} /> */}
-      
+        <Chevron color={dropdownVisible ? secondary : main} />
       </Button>
 
-      {hover && (
+      {dropdownVisible && (
         <NavOptions
           colorMain={main}
           colorSecondary={secondary}
