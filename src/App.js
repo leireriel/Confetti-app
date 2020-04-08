@@ -1,11 +1,10 @@
 import React, { memo } from 'react';
-import { Paragraph } from 'components/fonts';
+import { Paragraph, Micro } from 'components/fonts';
 import { MainWithConfetti, WrapperHome, Section } from 'components/containers';
 import NavHeader from 'components/NavHeader';
 import Footer from 'components/Footer';
 import Brand from 'components/Brand';
 
-import Dropdown from 'components/Dropdown';
 import Button from 'components/Button';
 
 const App = () => (
@@ -22,8 +21,8 @@ const App = () => (
           <Paragraph>
             Hola, esto es otra sección
           </Paragraph>
-          <Button margin='1em 0'>normal</Button>
-          <Button type='disabled' margin='1em 0'>disabled</Button>
+          <Button margin='1em 0'><Micro>normal</Micro></Button>
+          <Button type='disabled' margin='1em 0'><Micro>disabled</Micro></Button>
           <Button type='warning' margin='1em 0'>warning</Button>
         </Section>
       </WrapperHome>
