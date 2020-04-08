@@ -20,6 +20,7 @@ export const Micro = styled.p`
 export const Link = styled.a`
   color: ${props => props.contrast ? white : blue};
   text-decoration: none;
+  font-size: 1em;
   font-weight: 300;
   position: relative;
 

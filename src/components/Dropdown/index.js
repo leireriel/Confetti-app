@@ -12,17 +12,22 @@ const colors = {
 
 const Dropdown = ({ title, options }) => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [sizeButton, setSizeButton] = useState({height: 0, width: 0})
 
-  const handleClick = () => {
+  const handleClick = (event) => {
     setDropdownVisible(!dropdownVisible);
+
+    const rippleContainer = event.currentTarget.getBoundingClientRect();
+    const { height, width } = rippleContainer;
+    setSizeButton({height, width});
   };
 
   const { main, secondary } = colors;
 
   return (
-    <>
+    <div style={{position: 'relative'}}>
       <Button
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
         colorMain={main}
         colorSecondary={secondary}
         dropdownVisible={dropdownVisible}
@@ -35,6 +40,7 @@ const Dropdown = ({ title, options }) => {
         <NavOptions
           colorMain={main}
           colorSecondary={secondary}
+          positionTop={sizeButton.height}
         >
           <List>
             {options.map((option, index) => (
@@ -45,7 +51,7 @@ const Dropdown = ({ title, options }) => {
           </List>
         </NavOptions>
       )}
-    </>
+    </div>
   );
 };
 

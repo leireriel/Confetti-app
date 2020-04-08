@@ -5,6 +5,8 @@ import NavHeader from 'components/NavHeader';
 import Footer from 'components/Footer';
 import Brand from 'components/Brand';
 
+import Dropdown from 'components/Dropdown';
+
 const App = () => (
   <>
     <NavHeader />
@@ -19,6 +21,10 @@ const App = () => (
           <Paragraph>
             Hola, esto es otra sección
           </Paragraph>
+          <Dropdown
+            title='Silvinho'
+            options={['Ajustes', 'Cerrar sesión']}
+          />
         </Section>
       </WrapperHome>
     </MainWithConfetti>

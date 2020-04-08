@@ -13,7 +13,6 @@ export const Button = styled.button`
   border: none;
   border-radius: 6px;
   outline: 0;
-  position: relative;
 
   svg {
     padding: ${props => props.dropdownVisible ? '0 0.5em 0 0' : '0 0 0 0.5em'};
@@ -24,8 +23,8 @@ export const Button = styled.button`
 
 export const NavOptions = styled.nav`
   position: absolute;
-  top: 3em;
-  border: 1px solid ${props => props.colorMain};
+  top: ${props => `${props.positionTop}px`};
+  box-shadow: ${props => `0 0 10px 1px ${props.colorMain}`};
   border-radius: 6px;
   padding: 8px 12px;
   background: ${props => props.colorSecondary};
