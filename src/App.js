@@ -6,6 +6,7 @@ import Footer from 'components/Footer';
 import Brand from 'components/Brand';
 
 import Dropdown from 'components/Dropdown';
+import Button from 'components/Button';
 
 const App = () => (
   <>
@@ -25,6 +26,9 @@ const App = () => (
             title='Silvinho'
             options={['Ajustes', 'Cerrar sesión']}
           />
+          <Button>normal</Button>
+          <Button type='disabled'>disabled</Button>
+          <Button type='warning'>warning</Button>
         </Section>
       </WrapperHome>
     </MainWithConfetti>

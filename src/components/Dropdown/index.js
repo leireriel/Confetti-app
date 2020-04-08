@@ -12,14 +12,25 @@ const colors = {
 
 const Dropdown = ({ title, options }) => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const [sizeButton, setSizeButton] = useState({height: 0, width: 0})
+  const [sizeButton, setSizeButton] = useState({width: 0, height: 0});
+  const [posYDropdown, setPosYDropdown] = useState('');
 
   const handleClick = (event) => {
     setDropdownVisible(!dropdownVisible);
 
-    const rippleContainer = event.currentTarget.getBoundingClientRect();
-    const { height, width } = rippleContainer;
-    setSizeButton({height, width});
+    const buttonPos = event.currentTarget.getBoundingClientRect();
+    const { width, height, left, right, top, bottom } = buttonPos;
+
+    setSizeButton({width, height});
+
+    const viewportHeight = window.innerHeight;
+    const bottomTotal = viewportHeight - bottom;
+
+    if (top > bottomTotal) {
+      setPosYDropdown('bottom');
+    } else {
+      setPosYDropdown('top');
+    }
   };
 
   const { main, secondary } = colors;
@@ -40,7 +51,10 @@ const Dropdown = ({ title, options }) => {
         <NavOptions
           colorMain={main}
           colorSecondary={secondary}
-          positionTop={sizeButton.height}
+          heightButton={sizeButton.height}
+          posYDropdown={posYDropdown}
+          // positionLeft={sizeButton.width}
+          // positionRight={sizeButton.width}
         >
           <List>
             {options.map((option, index) => (
