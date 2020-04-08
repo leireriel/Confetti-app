@@ -33,10 +33,20 @@ const NavHeader = () => {
             <Logo columnDirection={false}/>
           </Li>
           <Li>
+          <div style={{display: 'flex'}}>
             <Dropdown
               title='Silvinho'
               options={['Ajustes', 'Cerrar sesión']}
             />
+            <Dropdown
+              title='Silvinho'
+              options={['Ajustes', 'Cerrar sesión']}
+            />
+            <Dropdown
+              title='Silvinho'
+              options={['Ajustes', 'Cerrar sesión']}
+            />
+          </div>
           </Li>
         </List>
       </NavBar>

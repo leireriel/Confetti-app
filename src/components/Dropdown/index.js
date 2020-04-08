@@ -12,29 +12,33 @@ const colors = {
 
 const Dropdown = ({ title, options }) => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-  const [posYDropdown, setPosYDropdown] = useState([]);
-  const [posXDropdown, setPosXDropdown] = useState([]);
+  const [heightButton, setHeightButton] = useState('');
+  const [posYDropdown, setPosYDropdown] = useState('');
+  const [posXDropdown, setPosXDropdown] = useState('');
 
   const handleClick = (event) => {
     setIsDropdownVisible(!isDropdownVisible);
 
     const buttonPos = event.currentTarget.getBoundingClientRect();
     const { height, left, right, top, bottom } = buttonPos;
+
+    setHeightButton(height);
+
     const viewportHeight = window.innerHeight;
     const bottomTotal = viewportHeight - bottom;
     const viewportWidth = window.innerWidth;
     const rightTotal = viewportWidth - right;
 
     if (top > bottomTotal) {
-      setPosYDropdown(['bottom', height]);
+      setPosYDropdown('bottom');
     } else {
-      setPosYDropdown(['top', height]);
+      setPosYDropdown('top');
     }
 
     if (left > rightTotal) {
-      setPosXDropdown(['right', rightTotal]);
+      setPosXDropdown('right');
     } else {
-      setPosXDropdown(['left', left]);
+      setPosXDropdown('left');
     }
   };
 
@@ -56,10 +60,9 @@ const Dropdown = ({ title, options }) => {
         <NavOptions
           colorMain={main}
           colorSecondary={secondary}
-          posYDropdown={posYDropdown[0]}
-          y={posYDropdown[1]}
-          posXDropdown={posXDropdown[0]}
-          x={posXDropdown[1]}
+          posYDropdown={posYDropdown}
+          y={heightButton}
+          posXDropdown={posXDropdown}
         >
           <List>
             {options.map((option, index) => (

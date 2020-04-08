@@ -26,8 +26,8 @@ export const NavOptions = styled.nav`
   position: absolute;
   top: ${props => (props.posYDropdown === 'top') && `${props.y}px`};
   bottom: ${props => (props.posYDropdown === 'bottom') && `${props.y}px`};
-  left: ${props => (props.posXDropdown === 'left') && `${props.x}px`};
-  right: ${props => (props.posXDropdown === 'right') && `${props.x}px`};
+  left: ${props => (props.posXDropdown === 'left') && '0'};
+  right: ${props => (props.posXDropdown === 'right') && '0'};
   box-shadow: ${props => `0 0 10px 1px ${props.colorMain}`};
   border-radius: 6px;
   padding: 8px 12px;
