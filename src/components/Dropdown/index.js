@@ -11,25 +11,30 @@ const colors = {
 };
 
 const Dropdown = ({ title, options }) => {
-  const [dropdownVisible, setDropdownVisible] = useState(false);
-  const [sizeButton, setSizeButton] = useState({width: 0, height: 0});
-  const [posYDropdown, setPosYDropdown] = useState('');
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+  const [posYDropdown, setPosYDropdown] = useState([]);
+  const [posXDropdown, setPosXDropdown] = useState([]);
 
   const handleClick = (event) => {
-    setDropdownVisible(!dropdownVisible);
+    setIsDropdownVisible(!isDropdownVisible);
 
     const buttonPos = event.currentTarget.getBoundingClientRect();
-    const { width, height, left, right, top, bottom } = buttonPos;
-
-    setSizeButton({width, height});
-
+    const { height, left, right, top, bottom } = buttonPos;
     const viewportHeight = window.innerHeight;
     const bottomTotal = viewportHeight - bottom;
+    const viewportWidth = window.innerWidth;
+    const rightTotal = viewportWidth - right;
 
     if (top > bottomTotal) {
-      setPosYDropdown('bottom');
+      setPosYDropdown(['bottom', height]);
     } else {
-      setPosYDropdown('top');
+      setPosYDropdown(['top', height]);
+    }
+
+    if (left > rightTotal) {
+      setPosXDropdown(['right', rightTotal]);
+    } else {
+      setPosXDropdown(['left', left]);
     }
   };
 
@@ -41,20 +46,20 @@ const Dropdown = ({ title, options }) => {
         onClick={(event) => handleClick(event)}
         colorMain={main}
         colorSecondary={secondary}
-        dropdownVisible={dropdownVisible}
+        dropdownVisible={isDropdownVisible}
       >
         <Paragraph>{title}</Paragraph>
-        <Chevron color={dropdownVisible ? secondary : main} />
+        <Chevron color={isDropdownVisible ? secondary : main} />
       </Button>
 
-      {dropdownVisible && (
+      {isDropdownVisible && (
         <NavOptions
           colorMain={main}
           colorSecondary={secondary}
-          heightButton={sizeButton.height}
-          posYDropdown={posYDropdown}
-          // positionLeft={sizeButton.width}
-          // positionRight={sizeButton.width}
+          posYDropdown={posYDropdown[0]}
+          y={posYDropdown[1]}
+          posXDropdown={posXDropdown[0]}
+          x={posXDropdown[1]}
         >
           <List>
             {options.map((option, index) => (
@@ -68,9 +73,6 @@ const Dropdown = ({ title, options }) => {
     </div>
   );
 };
-
-// https://react-bootstrap.github.io/components/Dropdowns/
-// https://cabify.com/es
 
 Dropdown.propTypes = {
   title: PropTypes.string.isRequired,

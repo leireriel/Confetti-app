@@ -13,6 +13,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 6px;
   outline: 0;
+  transition: all 0.5s ease;
 
   svg {
     padding: ${props => props.dropdownVisible ? '0 0.5em 0 0' : '0 0 0 0.5em'};
@@ -23,15 +24,16 @@ export const Button = styled.button`
 
 export const NavOptions = styled.nav`
   position: absolute;
-  top: ${props => (props.posYDropdown === 'top') && `${props.heightButton}px`};
-  bottom: ${props => (props.posYDropdown === 'bottom') && `${props.heightButton}px`};
-  // left: ${props => `${props.positionLeft}px`};
-  // right: ${props => `${props.positionRight}px`};
+  top: ${props => (props.posYDropdown === 'top') && `${props.y}px`};
+  bottom: ${props => (props.posYDropdown === 'bottom') && `${props.y}px`};
+  left: ${props => (props.posXDropdown === 'left') && `${props.x}px`};
+  right: ${props => (props.posXDropdown === 'right') && `${props.x}px`};
   box-shadow: ${props => `0 0 10px 1px ${props.colorMain}`};
   border-radius: 6px;
   padding: 8px 12px;
   background: ${props => props.colorSecondary};
   z-index: 1;
+  width: max-content;
 `;
 
 export const List = styled.ol`
