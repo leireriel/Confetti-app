@@ -67,7 +67,9 @@ const Dropdown = ({ title, options }) => {
           <List>
             {options.map((option, index) => (
               <Li key={index}>
-                <Link href='#fd'>{option}</Link>
+                <Link href='#fd'>
+                  <Paragraph>{option}</Paragraph>
+                </Link>
               </Li>
             ))}
           </List>
