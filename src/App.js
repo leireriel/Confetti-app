@@ -22,20 +22,6 @@ const App = () => (
           <Paragraph>
             Hola, esto es otra sección
           </Paragraph>
-          <div style={{display: 'flex'}}>
-            <Dropdown
-              title='Silvinho'
-              options={['Ajustes', 'Cerrar sesión']}
-            />
-            <Dropdown
-              title='Silvinho'
-              options={['Ajustes', 'Cerrar sesión']}
-            />
-            <Dropdown
-              title='Silvinho'
-              options={['Ajustes', 'Cerrar sesión']}
-            />
-          </div>
           <Button margin='1em 0'>normal</Button>
           <Button type='disabled' margin='1em 0'>disabled</Button>
           <Button type='warning' margin='1em 0'>warning</Button>
