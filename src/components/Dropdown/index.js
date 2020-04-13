@@ -1,6 +1,6 @@
 import React, { memo, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Paragraph, Link } from 'components/fonts';
+import { P, A } from 'components/fonts';
 import { blue, white } from 'constants/colors';
 import Chevron from 'assets/Chevron';
 import { Button, NavOptions, List, Li } from './styles';
@@ -52,7 +52,7 @@ const Dropdown = ({ title, options }) => {
         colorSecondary={secondary}
         dropdownVisible={isDropdownVisible}
       >
-        <Paragraph>{title}</Paragraph>
+        <P>{title}</P>
         <Chevron color={isDropdownVisible ? secondary : main} />
       </Button>
 
@@ -67,9 +67,9 @@ const Dropdown = ({ title, options }) => {
           <List>
             {options.map((option, index) => (
               <Li key={index}>
-                <Link href='#fd'>
-                  <Paragraph>{option}</Paragraph>
-                </Link>
+                <A href='#fd'>
+                  {option}
+                </A>
               </Li>
             ))}
           </List>

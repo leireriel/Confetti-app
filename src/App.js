@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Paragraph, Micro } from 'components/fonts';
+import { P, Small } from 'components/fonts';
 import { MainWithConfetti, WrapperHome, Section } from 'components/containers';
 import NavHeader from 'components/NavHeader';
 import Footer from 'components/Footer';
@@ -13,16 +13,16 @@ const App = () => (
     <MainWithConfetti>
       <WrapperHome>
         <Section>
-          <Paragraph>
+          <P>
             Crea tu cuenta en <Brand /> y no vuelvas a olvidarte de un cumpleaños"! 😉
-          </Paragraph>
+          </P>
         </Section>
         <Section lastOne={true}>
-          <Paragraph>
+          <P>
             Hola, esto es otra sección
-          </Paragraph>
-          <Button margin='1em 0'><Micro>normal</Micro></Button>
-          <Button type='disabled' margin='1em 0'><Micro>disabled</Micro></Button>
+          </P>
+          <Button margin='1em 0'><Small>normal</Small></Button>
+          <Button type='disabled' margin='1em 0'><Small>disabled</Small></Button>
           <Button type='warning' margin='1em 0'>warning</Button>
         </Section>
       </WrapperHome>
