@@ -22,23 +22,16 @@ export const Small = styled.small`
 `;
 
 export const A = styled.a`
-  color: ${props => props.contrast ? white : blue};
-  text-decoration: none;
+  color: ${blue};
+  text-decoration: ${props => props.underline ? 'underline' : 'none'};
   font-weight: 300;
-  position: relative;
-
-  &::before, &::after {
-    content: '';
-    position: absolute;
-    top: 55%;
-    left: 0.5em;
-    width: calc(100% - 0.25em);
-    height: 0.7em;
-    background-color: ${green};
-    opacity: 0.08;
-  }
-
-  &:active {
+  outline: none;
+  
+  &:hover {
     color: ${green};
+  }
+  
+  &:active {
+    color: ${white};
   }
 `;

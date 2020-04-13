@@ -12,7 +12,7 @@ export const ButtonBase = styled.button`
   box-shadow: ${props => `inset 0 0 0 1px ${props.color}`};
   border: none;
   border-radius: 6px;
-  outline: 0;
+  outline: none;
   margin: ${props => props.margin};
   text-transform: uppercase;
   font-weight: 700;

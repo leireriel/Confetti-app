@@ -7,9 +7,11 @@ const Footer = () => {
     <FooterWrapper>
       <List>
         <li>
-          <A href='#f'>
-            <Small>Sobre nosotros</Small>
-          </A>
+          <Small>
+            <A href='#f'>
+              Sobre nosotros
+            </A>
+          </Small>
         </li>
       </List>
     </FooterWrapper>

@@ -30,7 +30,6 @@ export const NavOptions = styled.nav`
   right: ${props => (props.posXDropdown === 'right') && '0'};
   box-shadow: inset 0 0 0 1px ${props => props.colorMain};
   border-radius: 6px;
-  padding: 8px 12px;
   background: ${props => props.colorSecondary};
   z-index: 1;
   width: max-content;
@@ -44,5 +43,9 @@ export const List = styled.ol`
 `;
 
 export const Li = styled.li`
-  padding: 0.5em 0;
+  margin: 0.5em;
+
+  a {
+    display: block;
+  }
 `;

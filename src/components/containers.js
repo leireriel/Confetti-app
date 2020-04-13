@@ -11,13 +11,13 @@ export const MainWithConfetti = styled.main`
 `;
 
 export const WrapperHome = styled.div`
-  padding: 4em 1em 0.5em;
+  padding: 4em 1em 1em;
   max-width: 1000px;
   display: flex;
   flex-direction: column;
 
   @media ${device.tablet} {
-    padding: 4em 2em 1.5em;
+    padding: 4em 2em 2em;
     flex-direction: row;
     align-items: flex-start;
   }
