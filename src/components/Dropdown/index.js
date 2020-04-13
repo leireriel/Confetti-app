@@ -16,8 +16,12 @@ const Dropdown = ({ title, options }) => {
   const [posYDropdown, setPosYDropdown] = useState('');
   const [posXDropdown, setPosXDropdown] = useState('');
 
+  const changeDropdownVisibility = () => (
+    setIsDropdownVisible(!isDropdownVisible)
+  );
+
   const handleClick = (event) => {
-    setIsDropdownVisible(!isDropdownVisible);
+    changeDropdownVisibility();
 
     const buttonPos = event.currentTarget.getBoundingClientRect();
     const { height, left, right, top, bottom } = buttonPos;
@@ -66,7 +70,7 @@ const Dropdown = ({ title, options }) => {
         >
           <List>
             {options.map((option, index) => (
-              <Li key={index}>
+              <Li key={index} onClick={changeDropdownVisibility}>
                 <P>
                   <A href='#fd'>
                     {option}
