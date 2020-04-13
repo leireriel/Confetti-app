@@ -1,43 +1,89 @@
 import React, { memo, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Paragraph } from 'components/fonts';
-import { blue } from 'constants/colors';
-// import Ripple from 'components/Effects/Ripple';
+import { P, A } from 'components/fonts';
+import { blue, white } from 'constants/colors';
 import Chevron from 'assets/Chevron';
-import { Button, ButtonTitle, NavOptions, List } from './styles';
+import { Button, NavOptions, List, Li } from './styles';
 
-const Dropdown = ({ title, options }) => {
-  const [showOptions, setShowOptions] = useState(false);
-
-  return (
-    <>
-      <Button
-        color={blue}
-        onMouseOver={() => setShowOptions(true)}
-        onMouseOut={() => setShowOptions(false)}
-      >
-        <ButtonTitle>
-          <Paragraph>{title}</Paragraph>
-          <Chevron color={blue} />
-        </ButtonTitle>
-        {/* <Ripple rippleColor={lightBlue} /> */}
-      
-        {showOptions === showOptions && (
-          <NavOptions>
-            <List>
-              {options.map((option, index) => (
-                <li key={index}>{option}</li>
-              ))}
-            </List>
-          </NavOptions>
-        )}
-      </Button>
-    </>
-  );
+const colors = {
+  main: blue,
+  secondary: white
 };
 
-// https://react-bootstrap.github.io/components/Dropdowns/
-// https://cabify.com/es
+const Dropdown = ({ title, options }) => {
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+  const [heightButton, setHeightButton] = useState('');
+  const [posYDropdown, setPosYDropdown] = useState('');
+  const [posXDropdown, setPosXDropdown] = useState('');
+
+  const changeDropdownVisibility = () => (
+    setIsDropdownVisible(!isDropdownVisible)
+  );
+
+  const handleClick = (event) => {
+    changeDropdownVisibility();
+
+    const buttonPos = event.currentTarget.getBoundingClientRect();
+    const { height, left, right, top, bottom } = buttonPos;
+
+    setHeightButton(height);
+
+    const viewportHeight = window.innerHeight;
+    const bottomTotal = viewportHeight - bottom;
+    const viewportWidth = window.innerWidth;
+    const rightTotal = viewportWidth - right;
+
+    if (top > bottomTotal) {
+      setPosYDropdown('bottom');
+    } else {
+      setPosYDropdown('top');
+    }
+
+    if (left > rightTotal) {
+      setPosXDropdown('right');
+    } else {
+      setPosXDropdown('left');
+    }
+  };
+
+  const { main, secondary } = colors;
+
+  return (
+    <div style={{position: 'relative'}}>
+      <Button
+        onClick={(event) => handleClick(event)}
+        colorMain={main}
+        colorSecondary={secondary}
+        dropdownVisible={isDropdownVisible}
+      >
+        <P>{title}</P>
+        <Chevron color={isDropdownVisible ? secondary : main} />
+      </Button>
+
+      {isDropdownVisible && (
+        <NavOptions
+          colorMain={main}
+          colorSecondary={secondary}
+          posYDropdown={posYDropdown}
+          y={heightButton}
+          posXDropdown={posXDropdown}
+        >
+          <List>
+            {options.map((option, index) => (
+              <Li key={index} onClick={changeDropdownVisibility}>
+                <P>
+                  <A href='#fd'>
+                    {option}
+                  </A>
+                </P>
+              </Li>
+            ))}
+          </List>
+        </NavOptions>
+      )}
+    </div>
+  );
+};
 
 Dropdown.propTypes = {
   title: PropTypes.string.isRequired,

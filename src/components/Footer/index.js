@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Link, Micro } from 'components/fonts';
+import { A, Small } from 'components/fonts';
 import { FooterWrapper, List } from './styles';
 
 const Footer = () => {
@@ -7,9 +7,11 @@ const Footer = () => {
     <FooterWrapper>
       <List>
         <li>
-          <Link href='#f'>
-            <Micro>Sobre nosotros</Micro>
-          </Link>
+          <Small>
+            <A href='#f'>
+              Sobre nosotros
+            </A>
+          </Small>
         </li>
       </List>
     </FooterWrapper>
