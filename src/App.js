@@ -14,7 +14,7 @@ const App = () => (
       <WrapperHome>
         <Section>
           <P>
-            Crea tu cuenta en <Brand /> y no vuelvas a olvidarte de un cumpleaños"! 😉
+            Crea tu cuenta en <Brand /> y no vuelvas a olvidarte de un cumpleaños! 😉
           </P>
         </Section>
         <Section lastOne={true}>

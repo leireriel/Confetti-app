@@ -12,12 +12,12 @@ The app will have a calendar view and a detail view so you can edit the data of 
 
 - [x] Create **react.js** project structure :)
 - [x] Logo, icons, fonts, palette
+- [x] Generate favicon
 - [x] Integrate styled-components and create custom theme
 - [x] Header that hides on scroll down
 - [x] Button component (I recreated the material design ripple effect with some help from [this post](https://dev.to/rohanfaiyazkhan/recreating-the-material-design-ripple-effect-in-react-54p))
 - [x] Dropdown component
 - [ ] [Create theme for styled components](https://dev.to/aromanarguello/how-to-use-themes-in-styled-components-49h) Revisar font-weight de link y button, y tambien las font-sizes, colores, etc
-- [ ] Generar nuevo favicon
 - [ ] Uso de memo
 - [ ] Integrate Redux or React Context API - https://dev.to/rohanfaiyazkhan/sharing-more-with-react-s-context-api-e52
 - [ ] Routes: login/register and app (react-router-dom)
@@ -83,6 +83,7 @@ To generate a production ready version on `docs` folder:
 Now you can upload your public folder to GitHub Pages or similar :)
 
 ## 🎨 Attributions
+
 * Our chicken icon is originally a free icon by [stockio.com](https://www.stockio.com/) then edited by me
 * Favicon generated on [realfavicongenerator.net](https://realfavicongenerator.net/)
 * Palette from [coolors.co](https://coolors.co/)
