@@ -1,7 +1,7 @@
 import React, { memo, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { green, gray, red, white, opaqueWhite } from 'constants/colors';
-import Ripple from 'components/Effects/Ripple';
+import Ripple from './Ripple';
 import { ButtonBase } from './styles';
 
 const types = {

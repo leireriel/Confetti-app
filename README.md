@@ -17,7 +17,7 @@ The app will have a calendar view and a detail view so you can edit the data of 
 - [x] Header that hides on scroll down
 - [x] Button component (I recreated the material design ripple effect with some help from [this post](https://dev.to/rohanfaiyazkhan/recreating-the-material-design-ripple-effect-in-react-54p))
 - [x] Dropdown component
-- [ ] [Create theme for styled components](https://dev.to/aromanarguello/how-to-use-themes-in-styled-components-49h) Revisar font-weight de link y button, y tambien las font-sizes, colores, etc
+- [wip] [Create theme for styled components](https://dev.to/aromanarguello/how-to-use-themes-in-styled-components-49h) Revisar font-weight de link y button, y tambien las font-sizes, colores, etc
 - [ ] Uso de memo
 - [ ] Integrate Redux or React Context API - https://dev.to/rohanfaiyazkhan/sharing-more-with-react-s-context-api-e52
 - [ ] Routes: login/register and app (react-router-dom)
