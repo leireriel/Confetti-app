@@ -7,30 +7,32 @@ export const Button = styled.button`
   padding: 8px 12px;
   min-width: 5em;
   cursor: pointer;
-  background-color: ${props => props.dropdownVisible ? props.colorMain : props.colorSecondary};
-  color: ${props => props.dropdownVisible ? props.colorSecondary : props.colorMain};
-  box-shadow: inset 0 0 0 1px ${props => props.colorMain};
+  background-color: ${({ dropdownVisible, colorMain, colorSecondary }) => (
+    dropdownVisible ? colorMain : colorSecondary)};
+  color: ${({ dropdownVisible, colorMain, colorSecondary }) => (
+    dropdownVisible ? colorSecondary : colorMain)};
+  box-shadow: inset 0 0 0 1px ${({ colorMain }) => colorMain};
   border: none;
   border-radius: 6px;
   outline: 0;
   transition: all 0.5s ease;
 
   svg {
-    padding: ${props => props.dropdownVisible ? '0 0.5em 0 0' : '0 0 0 0.5em'};
-    transform: ${props => props.dropdownVisible && 'rotate(180deg)'};
+    padding: ${({ dropdownVisible }) => dropdownVisible ? '0 0.5em 0 0' : '0 0 0 0.5em'};
+    transform: ${({ dropdownVisible }) => dropdownVisible && 'rotate(180deg)'};
     transition: all 0.5s ease;
   }
 `;
 
 export const NavOptions = styled.nav`
   position: absolute;
-  top: ${props => (props.posYDropdown === 'top') && `${props.y + 5}px`};
-  bottom: ${props => (props.posYDropdown === 'bottom') && `${props.y + 5}px`};
-  left: ${props => (props.posXDropdown === 'left') && '0'};
-  right: ${props => (props.posXDropdown === 'right') && '0'};
-  box-shadow: inset 0 0 0 1px ${props => props.colorMain};
+  top: ${({ posYDropdown, y }) => (posYDropdown === 'top') && `${y + 5}px`};
+  bottom: ${({ posYDropdown, y }) => (posYDropdown === 'bottom') && `${y + 5}px`};
+  left: ${({ posXDropdown }) => (posXDropdown === 'left') && '0'};
+  right: ${({ posXDropdown }) => (posXDropdown === 'right') && '0'};
+  box-shadow: inset 0 0 0 1px ${({ colorMain }) => colorMain};
   border-radius: 6px;
-  background: ${props => props.colorSecondary};
+  background: ${({ colorSecondary }) => colorSecondary};
   z-index: 1;
   width: max-content;
   box-sizing: border-box;

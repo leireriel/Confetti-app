@@ -4,11 +4,12 @@ import { black } from 'constants/colors';
 export const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
-  flex-direction: ${props => (props.columnDirection && 'column') || 'row-reverse'};
-  align-items: ${props => props.columnDirection && 'center'};
+  flex-direction: ${({ columnDirection }) => (
+    columnDirection && 'column') || 'row-reverse'};
+  align-items: ${({ columnDirection }) => columnDirection && 'center'};
 
   p {
-    margin-right: ${props => !props.columnDirection && '0.5em'};
+    margin-right: ${({ columnDirection }) => !columnDirection && '0.5em'};
   }
 `;
 

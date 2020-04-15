@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { P, Small } from 'components/fonts';
+import { H1, P, Small } from 'components/fonts';
 import { MainWithConfetti, WrapperHome, Section } from 'components/containers';
 import NavHeader from 'components/NavHeader';
 import Footer from 'components/Footer';
@@ -13,6 +13,7 @@ const App = () => (
     <MainWithConfetti>
       <WrapperHome>
         <Section>
+          <H1>Septiembre</H1>
           <P>
             Crea tu cuenta en <Brand /> y no vuelvas a olvidarte de un cumpleaños! 😉
           </P>

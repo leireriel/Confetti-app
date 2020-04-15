@@ -9,7 +9,7 @@ export const Header = styled.header`
   padding: 0 1em;
   height: 3em;
   position: fixed;
-  top: ${props => props.show ? '0' : '-3em'};
+  top: ${({ show }) => show ? '0' : '-3em'};
   transition: top 0.3s;
   width: 100%;
   box-sizing: border-box;

@@ -12,9 +12,9 @@ export const RippleContainer = styled.div`
     border-radius: 100%;
     position: absolute;
     opacity: 0.75;
-    background-color: ${props => props.rippleColor};
+    background-color: ${({ rippleColor }) => rippleColor};
     animation-name: ripple;
-    animation-duration: ${props => props.duration}ms;
+    animation-duration: ${({ duration }) => duration}ms;
   }
 
   @keyframes ripple {
